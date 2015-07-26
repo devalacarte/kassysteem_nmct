@@ -1,0 +1,24 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.BeheerKassas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BeheerKassas" Height="530" Width="830" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        <GroupBox Header="Kassa's">
+            
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+            
+        </GroupBox>
+
+        <GroupBox Header="Bemanning kassa" Grid.Column="1">
+
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+
+        </GroupBox>
+
+    </Grid>
+</Window>

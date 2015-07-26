@@ -1,0 +1,24 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.Klant"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Klant" Height="530" Width="830">
+    <Grid>
+        
+        
+        <GroupBox Header="Identificeer klant" Margin="200,20,200,232">
+            
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0">Scan je kaart en druk op "Registreren".</TextBlock>
+                <Button Content="Registreren" Margin="65,20,65,0" Height="30" IsEnabled="False"/>
+                <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0">Naam klant:</TextBlock>
+                <TextBox Margin="65,20,65,0" Height="30"></TextBox>
+                <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0">Saldo klant</TextBlock>
+            </StackPanel>
+            
+        </GroupBox>
+        
+        
+        
+        
+    </Grid>
+</Window>

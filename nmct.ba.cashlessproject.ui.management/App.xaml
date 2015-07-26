@@ -1,0 +1,62 @@
+﻿<Application x:Class="nmct.ba.cashlessproject.ui.management.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <!-- TEMPLATE OPPASSEN -->
+        <ControlTemplate x:Key="ErrorTemplate">
+            <DockPanel LastChildFill="true">
+                <!--<Border BorderBrush="Red" BorderThickness="1">
+                    <AdornedElementPlaceholder/>
+                </Border>
+                <TextBlock Foreground="Red" Text="{Binding [0].ErrorContent}"/>-->
+                <Border Background="Red" DockPanel.Dock="right" Margin="5,0,0,0" Width="20" Height="20" CornerRadius="10"
+                            ToolTip="{Binding ElementName=customAdorner, Path=AdornedElement.(Validation.Errors).CurrentItem.ErrorContent}">
+                    <!--=AdornedElement.(Validation.Errors)[0].ErrorContent-->
+                    <TextBlock Text="!" VerticalAlignment="center" HorizontalAlignment="center" FontWeight="Bold" Foreground="white"/>
+                </Border>
+                <AdornedElementPlaceholder Name="customAdorner" VerticalAlignment="Center" >
+                    <Border BorderBrush="red" BorderThickness="1" />
+                </AdornedElementPlaceholder>
+            </DockPanel>
+        </ControlTemplate>
+        <!-- TEMPLATE OPPASSEN GEDAAN-->
+        <!-- Button -->
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="11px" />
+            <Setter Property="Height" Value="80px" />
+            <Setter Property="Width" Value="80px" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <!-- Textbox -->
+        <Style x:Key="TextboxStyle" TargetType="{x:Type TextBox}">
+            <!--<Setter Property="FontSize" Value="11px" />-->
+            <Setter Property="Height" Value="25px" />
+            <!--<Setter Property="Width" Value="200px" />-->
+            <Setter Property="Margin" Value="20,0,10,0"/>
+            <!--<Setter Property="HorizontalAlignment" Value="Center" />-->
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <!--<Setter Property="Background" Value="Red"/>-->
+                    <!--<Setter Property="Foreground" Value="White"/>-->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- PasswordBox -->
+        <Style x:Key="PassboxStyle" TargetType="{x:Type PasswordBox}">
+            <!--<Setter Property="FontSize" Value="11px" />-->
+            <Setter Property="Height" Value="25px" />
+            <!--<Setter Property="Width" Value="200px" />-->
+            <Setter Property="Margin" Value="20,0,10,0"/>
+            <!--<Setter Property="HorizontalAlignment" Value="Center" />-->
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <!--<Setter Property="Background" Value="Red"/>-->
+                    <!--<Setter Property="Foreground" Value="White"/>-->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>

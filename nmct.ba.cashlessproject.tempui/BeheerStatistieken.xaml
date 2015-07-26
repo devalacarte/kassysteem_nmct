@@ -1,0 +1,35 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.BeheerStatistieken"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BeheerStatistieken" Height="530" Width="830" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <GroupBox Header="Kies product" Margin="10,10,10,10">
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+        </GroupBox>
+
+        <GroupBox Header="Kies kassa" Margin="10,10,10,9" Grid.Row="1">
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+        </GroupBox>
+
+        <!-- Periode waarvan de statistieken weergegeven moeten worden -->
+        <TextBlock Grid.Column="1" Margin="46,25,369,195" VerticalAlignment="Center">Van:</TextBlock>
+        <DatePicker Grid.Column="1" Margin="84,25,235,195"/>
+        <TextBlock Grid.Column="1" Margin="232,32,183,202" VerticalAlignment="Center">Tot:</TextBlock>
+        <DatePicker Grid.Column="1" Margin="270,25,49,195"/>
+        
+        <GroupBox Header="Verkoop" Grid.Column="1" Margin="10,78,10,10" Grid.RowSpan="2">
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+        </GroupBox>
+
+    </Grid>
+</Window>

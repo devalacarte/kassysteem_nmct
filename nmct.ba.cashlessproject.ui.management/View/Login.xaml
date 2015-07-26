@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="nmct.ba.cashlessproject.ui.management.View.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:nmct.ba.cashlessproject.ui.management.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="354">
+    <UserControl.DataContext>
+        <vm:LoginVM/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <GroupBox Grid.Column="1" Header="Database Login" Height="200" Width="354">
+            <StackPanel>
+                <TextBlock Text="Gebruikersnaam: " Margin="20,15,0,0" />
+                <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextboxStyle}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}"/>
+
+                <TextBlock Text="Wachtwoord: " Margin="20,15,0,0" />
+                <!-- replace with password box and "break" the MVVM pattern: http://stackoverflow.com/questions/1483892/how-to-bind-to-a-passwordbox-in-mvvm-->
+                <TextBox Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextboxStyle}" Validation.ErrorTemplate="{StaticResource ErrorTemplate}"/>
+
+                <Button Command="{Binding LoginCommand}" Content="Login" Height="30px" Margin="71,20,71,0" HorizontalAlignment="Center" Width="200"/>
+                <TextBlock Foreground="Red" Text="{Binding Error}"/>
+
+            </StackPanel>
+
+        </GroupBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,55 @@
+﻿<Window x:Class="nmct.ba.cashlessproject.tempui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="546" Width="792" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+         <!-- De 5 hoofdknoppen -->
+        <Button Style="{StaticResource ButtonStyle}" Content="Beheer&#x0a;producten" Margin="27,14,21,10" Grid.Column="1" IsEnabled="False"/>
+        <Button Style="{StaticResource ButtonStyle}" Content="Beheer&#x0a;klanten" Margin="20,14,20,10" Grid.Column="2" IsEnabled="False"/>
+        <Button Style="{StaticResource ButtonStyle}" Content="Beheer&#x0a;kassa" Margin="22,14,20,10" Grid.Column="3" IsEnabled="False"/>
+        <Button Style="{StaticResource ButtonStyle}" Content="Statistieken&#x0a;verkoop" Margin="27,14,21,10" Grid.Column="1" Grid.Row="1" IsEnabled="False"/>
+        <Button Style="{StaticResource ButtonStyle}" Content="Beheer&#x0a;medewerkers" Margin="22,14,20,10" Grid.Column="3" Grid.Row="1" IsEnabled="False"/>
+
+        <!-- Wachtwoord wijzigen & uitloggen knoppen -->
+        <Button Content="Wachtwoord wijzigen" Grid.ColumnSpan="3" Grid.Column="1" Margin="32,10,29,236" Grid.Row="2" Visibility="Hidden"/>
+        <Button Content="Uitloggen" Grid.ColumnSpan="3" Grid.Column="1" Margin="32,70,29,176" Grid.Row="2" Visibility="Hidden"/>
+
+        <!-- Extra elementen als je wachtwoord wilt wijzigen -->
+        <TextBlock Grid.ColumnSpan="2" Grid.Column="1" Margin="85,55,79,201" Grid.Row="2" Visibility="Hidden">Oud wachtwoord:</TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.Column="2" Margin="64,57,29,198" Grid.Row="2" Visibility="Hidden"></TextBox>
+        <TextBlock Margin="85,97,74,161" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Visibility="Hidden">Nieuw wachtwoord:</TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.Column="2" Margin="64,94,29,161" Grid.Row="2" Visibility="Hidden"></TextBox>
+        <Button Content="Wachtwoord opslaan" Grid.ColumnSpan="3" Grid.Column="1" Margin="0,143,20,105" Grid.Row="2" Visibility="Hidden"/>
+
+        <!-- Login groupbox -->
+        <GroupBox Grid.Column="1" Header="Login" HorizontalAlignment="Left" Margin="32,10,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="200" Width="354">
+
+            <StackPanel>
+
+                <Label>Gebruikersnaam:</Label>
+                <TextBox Style="{StaticResource TextboxStyle}"></TextBox>
+
+                <Label>Wachtwoord:</Label>
+                <PasswordBox Margin="70,10,70,0" Height="20px"/>
+
+                <Button Height="30px" Margin="200,20,20,0" IsEnabled="False">Login</Button>
+
+            </StackPanel>
+
+        </GroupBox>
+
+    </Grid>
+</Window>
