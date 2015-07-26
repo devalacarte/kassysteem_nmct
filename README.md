@@ -1,1 +1,75 @@
 # kassysteem_nmct
+
+Project voor 2de jaar programmeren NMCT. Ik had enkel java en vb.net gezien. De nieuwe vakken in de jaren achter mij kregen allemaal c#, wpf & android. 
+Om mezelf bij te scholen had ik besloten om mijn stage (3de jaar) volledig in c# & wpf te programmeren. 
+Tijdens de kerstvakantie (tijdens mijn stage) heb ik ook dit project gemaakt voor een maat. 
+
+IT bedrijf (A)
+  Beheer verenigingen (A1) 
+    o Kan een nieuwe vereniging registreren met een login en een wachtwoord (A11) 
+    o Kan een database genereren voor een nieuwe vereniging (A12) 
+    o Kan basisinformatie over een vereniging invoeren (A13) 
+    o Kan basisinformatie over een vereniging bewerken (A14) 
+    o Kan basisinformatie over een vereniging weergeven (A15) 
+    o Kan een lijst van verenigingen die het systeem gebruiken weergeven (A16)
+    
+  Beheer kassa’s (A2) 
+    o Kan een nieuwe kassa toevoegen aan zijn assortiment (A21) 
+    o Kan een kassa toekennen aan een vereniging (A22) 
+    o Kan een kassa wijziging van vereniging (A23) 
+    o Kan een overzicht van alle kassa’s opvragen per vereniging (A24) 
+    o Kan een overzicht van alle beschikbare kassa’s opvragen (A25) 
+  
+  Logging (A3) 
+    o Kan een logboek van foutmeldingen en waarschuwingen van de kassa’s aanmaken (A31) 
+    o Kan een logboek van foutmeldingen en waarschuwingen van de kassa’s opvragen (A32) 
+    
+
+
+Vereniging: management (B)
+    Beheer account (B1) 
+        o Kan zich aanmelden op zijn account (B11) 
+        o Kan zich afmelden van zijn account (B12) 
+        o Kan zijn paswoord wijzigen (B13)
+    Beheer producten (B2) 
+        o Kan een product toevoegen aan een prijslijst (B21) 
+        o Kan de prijs van een product wijzigen uit de prijslijst (B22) 
+        o Kan een product verwijderen uit de prijslijst (B23) 
+    Beheer medewerkers (B3) 
+        o Kan een lijst met medewerkers weergeven (B31) 
+        o Kan een medewerker aan de lijst toevoegen (B32) 
+        o Kan gegevens van een medewerker wijzigen (B33) 
+        o Kan een medewerker uit de lijst verwijderen (B34) 
+    Beheer kassa (B4) 
+        o Kan een overzicht van al zijn kassa’s weergeven (B41) 
+        o Kan opvragen welke medewerker een kassa bemand heeft (B42) 
+    Beheer klanten (B5) 
+        o Kan een overzicht van al zijn klanten weergeven (B51)
+        o Kan gegevens (ook het saldo) van een klant wijzigen (B52) 
+    Beheer statistieken (B6) 
+        o Kan de totale verkoop opvragen over een bepaalde periode (B61) 
+        o Kan de verkoop per kassa opvragen over een bepaalde periode (B62) 
+        o Kan de verkoop per product opvragen over een bepaalde periode (B63) 
+        
+Vereniging: medewerker (C)         
+        o Kan zichzelf identificeren (C1) 
+        Kan een klant identificeren (C2) 
+        Kan het saldo van een kaart weergeven (C3) 
+        Kan een bestelling ingeven (C4) 
+
+Klant (D) 
+        Kan zichzelf registreren om het systeem te gebruiken (D1) 
+        Kan zijn kaart opladen voor een bedrag van maximum 100 euro (D2) 
+        Kan het huidige saldo van zijn kaart controleren (D3) 
+        
+Kassasysteem: medewerkers (E) 
+        Kan een waarschuwing geven als de prijs van de bestelling groter wordt dan het saldo van de kaart (E1) 
+        Kan het saldo van de kaart aanpassen (E2) 
+        Kan de bestelling opslaan voor de statistieken (E3) 
+        Kan foutmeldingen en waarschuwingen opslaan in het logboek (E4) (niet gedaan)
+        
+Kassasysteem: klant (F) (niet gedaan)
+        Kan controleren of een klant al geregistreerd is (F1) 
+        Kan biljetten van 5, 10, 20 en 50 euro herkennen (F2) 
+        Kan foutmeldingen en waarschuwingen opslaan in het logboek (F3) 
+
